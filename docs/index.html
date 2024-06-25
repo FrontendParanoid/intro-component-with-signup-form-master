@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-critters-container>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow: hidden;
+      }
+      @media only screen and (min-width: 768px) {
+        body {
+          background-image: url(./images/bg-intro-desktop.png);
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        body {
+          background-image: url(./images/bg-intro-mobile.png);
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="styles-MMYJ5IH2.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="styles-MMYJ5IH2.css" /></noscript>
+    <style ng-app-id="ng">
+      .body[_ngcontent-ng-c3549536315] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      main[_ngcontent-ng-c3549536315] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        padding: 60px 30px;
+        background-color: #ff000080;
+      }
+      .left[_ngcontent-ng-c3549536315] {
+        width: 30%;
+        margin-right: 50px;
+        color: #fff;
+      }
+      .left[_ngcontent-ng-c3549536315] h1[_ngcontent-ng-c3549536315] {
+        font-weight: bolder;
+        margin-bottom: 30px;
+        font-size: 48px;
+      }
+      .right[_ngcontent-ng-c3549536315]
+        .notification[_ngcontent-ng-c3549536315] {
+        background-color: #6055a5;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        box-shadow: 6px 6px 4px #46464680;
+      }
+      .right[_ngcontent-ng-c3549536315] {
+        width: 400px;
+      }
+      .right[_ngcontent-ng-c3549536315]
+        .notification[_ngcontent-ng-c3549536315]
+        p[_ngcontent-ng-c3549536315]
+        span[_ngcontent-ng-c3549536315] {
+        font-weight: 700;
+      }
+      .right[_ngcontent-ng-c3549536315] form[_ngcontent-ng-c3549536315] {
+        border-radius: 5px;
+        margin-top: 10px;
+        padding: 25px;
+        background-color: #fff;
+      }
+      .right[_ngcontent-ng-c3549536315]
+        form[_ngcontent-ng-c3549536315]
+        input[_ngcontent-ng-c3549536315] {
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid rgb(60, 59, 59, 0.5);
+        display: block;
+        caret-color: #6055a5;
+      }
+      .right[_ngcontent-ng-c3549536315]
+        form[_ngcontent-ng-c3549536315]
+        input[_ngcontent-ng-c3549536315]:focus {
+        outline: none;
+        border: 1px solid hsl(248, 32%, 49%);
+      }
+      .right[_ngcontent-ng-c3549536315]
+        form[_ngcontent-ng-c3549536315]
+        input[_ngcontent-ng-c3549536315]:focus::selection {
+        background-color: #6055a5;
+      }
+      .right[_ngcontent-ng-c3549536315]
+        form[_ngcontent-ng-c3549536315]
+        button[_ngcontent-ng-c3549536315] {
+        color: #fff;
+        font-weight: 500;
+        background-color: #38cc8c;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      .right[_ngcontent-ng-c3549536315]
+        form[_ngcontent-ng-c3549536315]
+        p[_ngcontent-ng-c3549536315] {
+        font-size: 12px;
+      }
+      .right[_ngcontent-ng-c3549536315]
+        form[_ngcontent-ng-c3549536315]
+        p[_ngcontent-ng-c3549536315]
+        .tos[_ngcontent-ng-c3549536315] {
+        color: #ff7a7a;
+        cursor: pointer;
+      }
+      .input-group[_ngcontent-ng-c3549536315] {
+        text-align: right;
+        margin-bottom: 8px;
+      }
+      .error[_ngcontent-ng-c3549536315] {
+        display: inline-block;
+        font-size: 12px;
+        color: #ff7a7a;
+      }
+      .error-display[_ngcontent-ng-c3549536315] {
+        background: url(./images/icon-error.svg);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
+        border: 1px solid red !important;
+      }
+      .placeholder-error[_ngcontent-ng-c3549536315]::placeholder {
+        color: #ff7a7a;
+        font-weight: 500;
+      }
+      @media only screen and (max-width: 1000px) {
+        main[_ngcontent-ng-c3549536315] {
+          justify-content: space-around;
+        }
+      }
+      @media only screen and (max-width: 900px) {
+        .right[_ngcontent-ng-c3549536315] {
+          width: 300px;
+        }
+        .left[_ngcontent-ng-c3549536315] h1[_ngcontent-ng-c3549536315] {
+          font-size: 36px;
+        }
+        .left[_ngcontent-ng-c3549536315] {
+          width: 50%;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .right[_ngcontent-ng-c3549536315] {
+          width: 50%;
+        }
+        .left[_ngcontent-ng-c3549536315] h1[_ngcontent-ng-c3549536315] {
+          font-size: 24px;
+        }
+      }
+      @media only screen and (max-width: 555px) {
+        main[_ngcontent-ng-c3549536315] {
+          flex-direction: column;
+          align-items: center;
+          padding: 50px;
+        }
+        .right[_ngcontent-ng-c3549536315] {
+          width: 100%;
+        }
+        .left[_ngcontent-ng-c3549536315] {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 20px;
+          margin-right: 0;
+        }
+      }
+      @media only screen and (max-width: 324px) {
+        .left[_ngcontent-ng-c3549536315] h1[_ngcontent-ng-c3549536315] {
+          font-size: 20px;
+        }
+        .left[_ngcontent-ng-c3549536315] p[_ngcontent-ng-c3549536315],
+        .right[_ngcontent-ng-c3549536315] {
+          font-size: 14px;
+        }
+        .right[_ngcontent-ng-c3549536315]
+          form[_ngcontent-ng-c3549536315]
+          button[_ngcontent-ng-c3549536315] {
+          padding: 10px;
+          font-size: 12px;
+        }
+        .right[_ngcontent-ng-c3549536315]
+          form[_ngcontent-ng-c3549536315]
+          input[_ngcontent-ng-c3549536315]::placeholder {
+          font-size: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--nghm-->
+    <app-root
+      _nghost-ng-c3549536315
+      ng-version="18.0.4"
+      ngh="0"
+      ng-server-context="ssg"
+      ><main _ngcontent-ng-c3549536315>
+        <div _ngcontent-ng-c3549536315 class="left">
+          <h1 _ngcontent-ng-c3549536315>Learn to code by watching others</h1>
+          <p _ngcontent-ng-c3549536315>
+            See how experienced developers solve problems in real-time.<br
+              _ngcontent-ng-c3549536315
+            />
+            Watching scripted tutorials is great, but understanding how<br
+              _ngcontent-ng-c3549536315
+            />
+            developers think is invaluable.
+          </p>
+        </div>
+        <div _ngcontent-ng-c3549536315 class="right">
+          <div _ngcontent-ng-c3549536315 class="notification">
+            <p _ngcontent-ng-c3549536315>
+              <span _ngcontent-ng-c3549536315>Try it free 7 days</span> then
+              $20/mo. thereafter
+            </p>
+          </div>
+          <form _ngcontent-ng-c3549536315 method="post">
+            <div _ngcontent-ng-c3549536315 class="input-group">
+              <input
+                _ngcontent-ng-c3549536315
+                type="text"
+                placeholder="First Name"
+                id="fname"
+              /><span _ngcontent-ng-c3549536315 class="error"></span>
+            </div>
+            <div _ngcontent-ng-c3549536315 class="input-group">
+              <input
+                _ngcontent-ng-c3549536315
+                type="text"
+                placeholder="Last Name"
+                id="lname"
+              /><span _ngcontent-ng-c3549536315 class="error"></span>
+            </div>
+            <div _ngcontent-ng-c3549536315 class="input-group">
+              <input
+                _ngcontent-ng-c3549536315
+                type="text"
+                placeholder="Email Address"
+                id="email"
+              /><span _ngcontent-ng-c3549536315 class="error"></span>
+            </div>
+            <div _ngcontent-ng-c3549536315 class="input-group">
+              <input
+                _ngcontent-ng-c3549536315
+                type="text"
+                placeholder="Password"
+                id="pass"
+              /><span _ngcontent-ng-c3549536315 class="error"></span>
+            </div>
+            <button _ngcontent-ng-c3549536315 appsubmithover type="submit">
+              CLAIM YOUR FREE TRIAL
+            </button>
+            <p _ngcontent-ng-c3549536315>
+              By clicking the button, you are agreeing to our
+              <span _ngcontent-ng-c3549536315 class="tos"
+                >Terms and Services</span
+              >
+            </p>
+          </form>
+        </div>
+      </main></app-root
+    >
+    <script src="polyfills-6EAL64PA.js" type="module"></script>
+    <script src="main-EIOXUNBA.js" type="module"></script>
+    <script id="ng-state" type="application/json">
+      { "__nghData__": [{}] }
+    </script>
+  </body>
+</html>
